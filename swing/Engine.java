@@ -113,7 +113,7 @@ public class Engine {
 		return grade;
 
 	}
-
+/*
 	public static Grade input2(Scanner scanner) {
 
 		Grade grade = new Grade();
@@ -147,6 +147,7 @@ public class Engine {
 		return grade;
 
 	}
+	*/
 
 	public static Member join(Scanner scanner) {
 

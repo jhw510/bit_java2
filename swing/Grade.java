@@ -1,6 +1,6 @@
 package com.jse.swing;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /*
 클라이언트에서 프로그램 개발 요청이 왔습니다.
@@ -16,6 +16,9 @@ public class Grade {
 	private int english;
 	private int math;
 	private String name;
+	
+	
+	
 
 	public void setKorea(int korea) {
 		this.korea = korea;

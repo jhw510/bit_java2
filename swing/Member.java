@@ -1,5 +1,5 @@
 package com.jse.swing;
-import java.util.Scanner;
+//import java.util.Scanner;
 public class Member {
 private String userid;
 private String passwd;
