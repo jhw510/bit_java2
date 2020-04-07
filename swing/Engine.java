@@ -51,8 +51,8 @@ public class Engine {
 				 * +"2등"+ y +"3등"+y);break; case 6:(z>y>x)=("1등" +z +"2등"+ y +"3등"+y);break;
 				 */
 
-				for (int i = 0; i < 3; i++) {
-				}
+				//for (int i = 0; i < 3; i++) {
+				
 				int a = grades[0].total();
 				int y = grades[1].total();
 				int z = grades[2].total();
@@ -81,10 +81,21 @@ public class Engine {
 						System.out.println("1등 :" + grades[2].getName() + " 2등:" + grades[1].getName() + " 3등:"
 								+ grades[0].getName());
 					}
-				}
+				}break;
+				
+			
+	
+	case 4:
+		System.out.println("회원가입");
+		for (int i = 0; i < 2; i++) {
+
+			member[i] =join(scanner);
+
+		}break;
 			}
 		}
 	}
+	
 
 	public static Grade input(Scanner scanner) {
 
