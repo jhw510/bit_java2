@@ -6,17 +6,15 @@ public class CardBean {
 	
 	public CardBean(String kind,int number) {
 		this.kind=kind;
-		this.number=number;
+		this.number=number;    
 	}
 	public void setKind(String kind) {
 		this.kind=kind;
-	
-	}
-
-	public String getkind() {
+		}
+public String getKind() {
 		return kind;
 	}
-	public void getNumber(int number) {
+	public void setNumber(int number) {
 		
 		this.number=number;
 	}
