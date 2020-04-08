@@ -61,7 +61,7 @@ public class Must {
 					CelPhone celPhone = celPhones[i];
 					message += String.format("출력 : %s, %s ,%s  \n",
 							celPhones[i].getPhoneNumber(), celPhones[i].getName(),
-							celPhones[i].getCompany(),celPhones[i].isPortable());
+							celPhones[i].getCompany(),celPhones[i].getMove());
 					
 				}
 				JOptionPane.showMessageDialog(null, message);
