@@ -8,20 +8,20 @@ public class Must {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		PhoneService phoneService = new PhoneService();
+		
 
 		while (true) {
 			System.out.println();
-			switch (JOptionPane.showInputDialog("0종료 1.전화번호정보 입력 2.전화번호 정보 출력")) {
-			case "0":
-				
-				return;
+			switch (JOptionPane.showInputDialog("0종료 \t 1.집전화 입력 \t 2.집전화 정보 출력"
+					+"\t 3.휴대전화 입력 \t 4.휴대전화출력")) {
+			case "0":return;
 
 			case "1":
 				for (int i = 0; i < 3; i++) {
 			
-					String[] values =	JOptionPane.showInputDialog("전화번호 (예 :010-xxxx-xxxx) ,이름 ,통신사를 입력하시오").split(",");
+					String[] values =JOptionPane.showInputDialog("전화번호 (예 :010-xxxx-xxxx) ,이름 ,통신사를 입력하시오").split(",");
 					
-					phoneService.add(new Phone(values[0],values[1], values[2]));
+					phoneService.addCelPhone(new Phone(values[0],values[1], values[2]));
 					
 				} 
 				
@@ -39,6 +39,10 @@ public class Must {
 						" 통신사: " +phones[i].getCompany());*/
 				} JOptionPane.showMessageDialog(null, message);
 			break;
+			case "3" :
+				
+				break;
+			case "4" : break;
 			}
 		}
 	}

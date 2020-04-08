@@ -1,11 +1,11 @@
 package com.jse.inheritance;
 
-public class CalPhone extends Phone {
+public class CelPhone extends Phone {
 
     private boolean portable;
     private String move;
   
-    public CalPhone(String phoneNumber, String name, String company,boolean portable) {
+    public CelPhone(String phoneNumber, String name, String company,boolean portable) {
     	super(phoneNumber,name,company);
     	
     	this.portable=portable;
