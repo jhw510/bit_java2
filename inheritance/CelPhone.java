@@ -2,25 +2,25 @@ package com.jse.inheritance;
 
 public class CelPhone extends Phone {
 
-    private boolean portable;
-    private String move;
-  
-    public CelPhone(String phoneNumber, String name, String company,boolean portable) {
-    	super(phoneNumber,name,company);
-    	
-    	
-    	setPortable(portable);
-    
-    }
-    
+	private boolean portable;
+	private String move;
+
+	public CelPhone(String phoneNumber, String name, String company, boolean portable) {
+		super(phoneNumber, name, company);
+
+		setPortable(portable);
+
+	}
+
 	public boolean isPortable() {
 		return portable;
 	}
+
 	public void setPortable(boolean portable) {
-		if(portable) {
-			this.move=" 휴대가능 ";
-		}else {
-			this.move=" 휴대불가능 ";
+		if (portable) {
+			this.move = " 휴대가능 ";
+		} else {
+			this.move = " 휴대불가능 ";
 		}
 	}
 
@@ -31,7 +31,5 @@ public class CelPhone extends Phone {
 	public void setMove(String move) {
 		this.move = move;
 	}
-    
-    }
 
-
+}

@@ -5,7 +5,7 @@ public class Iphone extends CelPhone {
 
 	private String search;
 
-	public Iphone(String phoneNumber, String name, String company, boolean portable) {
+	public Iphone(String phoneNumber, String name, String company, boolean portable, String search) {
 		super(phoneNumber, name, company, portable);
 		
 	}
