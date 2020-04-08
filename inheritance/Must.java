@@ -45,7 +45,7 @@ public class Must {
 			case "3":
 				for (int i = 0; i < 3; i++) {
 
-					String[] values = JOptionPane.showInputDialog("전화번호 (예 :010-xxxx-xxxx) ,"
+					String[] values = JOptionPane.showInputDialog("휴대전화번호 (예 :010-xxxx-xxxx) ,"
 							+ "이름 ,통신사를 입력하시오 ***,를 꼭 입력해주세요***").split(",");
 
 					phoneService.addCelPhone(new CelPhone(values[0], values[1], values[2],true));
@@ -61,7 +61,7 @@ public class Must {
 					CelPhone celPhone = celPhones[i];
 					message += String.format("출력 : %s, %s ,%s  \n",
 							celPhones[i].getPhoneNumber(), celPhones[i].getName(),
-							celPhones[i].getCompany());
+							celPhones[i].getCompany(),celPhones[i].isPortable());
 					
 				}
 				JOptionPane.showMessageDialog(null, message);
