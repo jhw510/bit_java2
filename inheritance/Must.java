@@ -13,7 +13,7 @@ public class Must {
 			System.out.println();
 			switch (JOptionPane.showInputDialog("0종료 \t 1.집전화 입력 \t "
 					+ "2.집전화 정보 출력" + 
-			"\t 3.휴대전화 입력 \t 4.휴대전화출력")) {
+			"\t 3.휴대전화 입력 \t 4.휴대전화출력 \t 5. 아이폰으로 검색")) {
 			case "0":
 				return;
 
@@ -59,12 +59,19 @@ public class Must {
 			
 				for (int i = 0; i < 3; i++) {
 					CelPhone celPhone = celPhones[i];
-					message += String.format("출력 : %s, %s ,%s  \n",
+					message += String.format("출력 : %s, %s , %s, %s \n",
 							celPhones[i].getPhoneNumber(), celPhones[i].getName(),
 							celPhones[i].getCompany(),celPhones[i].getMove());
 					
 				}
 				JOptionPane.showMessageDialog(null, message);
+				
+				break;
+				
+			case "5" :
+				
+				String search = JOptionPane.showInputDialog("검색어를 입력하시오");
+			
 				
 				break;
 			}

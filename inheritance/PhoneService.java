@@ -5,11 +5,14 @@ public class PhoneService {
 	private int count;
 	private CelPhone[] celPhones;
 
+ 
 	public PhoneService() {
 		phones = new Phone[3];
 		celPhones = new CelPhone[3];
 		count = 0;
+		
 	}
+
 
 	public CelPhone[] getCelPhones() {
 		return celPhones;
@@ -45,4 +48,5 @@ public class PhoneService {
 
 		count++;
 	}
+
 }
