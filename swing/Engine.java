@@ -47,15 +47,15 @@ public class Engine {
 				int y = grades[1].total();
 				int z = grades[2].total();
 
-				if (a > y) {
-					if (y > z) {
+				if (a > y && a>z) {
+					if (y > z ) {
 						System.out.println("1등 :" + grades[0].getName() + " 2등:" + grades[1].getName() + " 3등:"
 								+ grades[2].getName());
 					} else if (z > y) {
 						System.out.println("1등 :" + grades[0].getName() + " 2등:" + grades[2].getName() + " 3등:"
 								+ grades[1].getName());
 					}
-				} else if (y > a) {
+				} else if (y > a && y>z) {
 					if (a > z) {
 						System.out.println("1등 :" + grades[1].getName() + " 2등:" + grades[0].getName() + " 3등:"
 								+ grades[2].getName());
@@ -63,7 +63,7 @@ public class Engine {
 						System.out.println("1등 :" + grades[1].getName() + " 2등:" + grades[2].getName() + " 3등:"
 								+ grades[0].getName());
 					}
-				} else if (z > y) {
+				} else if (z > y && z>a) {
 					if (y > a) {
 						System.out.println("1등 :" + grades[2].getName() + " 2등:" + grades[1].getName() + " 3등:"
 								+ grades[0].getName());

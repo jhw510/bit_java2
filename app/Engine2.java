@@ -29,12 +29,12 @@ public class Engine2 {
 				return;
 			case 4:
 				System.out.println("가위1 바위2 보 3를 입력하시오");
-				int userValue = scanner.nextInt();
-				System.out.println("사용자의 값은 " + userValue);
-				rps.setUserValue(userValue);
+				
+				System.out.println("사용자의 값은 " + scanner.nextInt());
+				rps.setUserValue(scanner.nextInt());
 				int computerValue = random.nextInt(3) + 1;
-				System.out.println(String.format("컴퓨터은 %d 를 냈습니다.", computerValue));
-				rps.setComputerValue(computerValue);
+				System.out.println(String.format("컴퓨터은 %d 를 냈습니다.", random.nextInt(3) + 1));
+				rps.setComputerValue(random.nextInt(3) + 1);
 				String result2 = rps.game();
 				System.out.println(result2);
 
