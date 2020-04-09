@@ -8,4 +8,6 @@ public class Constants2 {
 	public final static String GRADE_MEMU="국어,영어,수학  이름을  입력";
 	public final static String MEMBER_MEMU="회원가입을 위한 정보를 입력해주세요";
 	public final static String MEMBER2_MEMU="id, 비밀번호 , 이름 , 나이를  입력";
+	public final static String RANKING_MEMU="id, 비밀번호 , 이름 , 나이를  입력";
+	
 }

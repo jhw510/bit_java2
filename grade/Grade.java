@@ -11,25 +11,20 @@ package com.jse.grade;
  *   * 80점 이상이면 B 70점 이상이면 C 60점 이상이면 
  *   D 50점 이상이면 E 50점 미만이면 F 학점입니다라고 출력되게 해주세요 
  */
+
+
 public class Grade {
-	private int korea;
-	private int english;
-	private int math;
+	private int korean,math,english;
+
 	private String name;
 
-	public Grade(int korea, int english, int math, String name) {
-		this.korea = korea;
-		this.english = english;
-		this.math = math;
-		this.name = name;
+
+	public void setKorean(int korean) {
+		this.korean = korean;
 	}
 
-	public void setKorea(int korea) {
-		this.korea = korea;
-	}
-
-	public int getKorea() {
-		return korea;
+	public int getKorean() {
+		return korean;
 	}
 
 	public void setEnglish(int english) {
@@ -55,39 +50,15 @@ public class Grade {
 	public String getName() {
 		return name;
 	}
-
-	public int total() {
-		return korea + english + math;
-
-	}
-
-	public int average() {
-		return total() / 3;
-
-	}
-
-	public String grade() {
-		int average = average();
-		String grade = "";
-		if (average >= 90) {
-			grade = "a";
-		} else if (average >= 80) {
-			grade = "b";
-		} else if (average >= 70) {
-			grade = "d";
-		} else if (average >= 60) {
-			grade = "e";
-		} else if (average >= 50) {
-			grade = "f";
-		} else {
-			grade = "낙제";
-		}
-		return grade;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "GradeBean :korea=" + korea + ", english=" + english + ", math=" + math + ", name=" + name ;
+		return "Grade [name=" + name + ", koreann=" + korean + ", math=" + math + ", english=" + english + "]";
+}
+
+
 	}
 
-}
+
+	
