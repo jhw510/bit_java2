@@ -1,4 +1,4 @@
-package com.jse.swing;
+package com.jse.member;
 
 public class Product {
 	private String name;

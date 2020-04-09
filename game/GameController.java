@@ -1,22 +1,23 @@
 
-package com.jse.app;
+package com.jse.game;
 
 import java.util.Random;
-import com.jse.app.Kaup;
 import java.util.Scanner;
-import com.jse.app.Member;
-import com.jse.app.Calculator;
-import com.jse.app.Dice2;
-import com.jse.app.RPS;
 
-public class Engine2 {
+import com.jse.game.Calculator;
+import com.jse.game.Dice;
+
+import com.jse.game.RPS;
+import com.jse.member.Kaup;
+import com.jse.member.Member;
+public class GameController {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Member member = new Member();
 		Random random = new Random();
 		RPS rps = null;
 		Calculator calculator = null;
-		Dice2 dice2 = null;
+		Dice dice = null;
 		Kaup kaup = null;
 		while (true) {
 			System.out.println(
@@ -80,7 +81,7 @@ public class Engine2 {
 
 				break;
 			case 5:
-				dice2 = new Dice2();
+				dice = new Dice();
 
 				System.out.println("******주사위 홀짝 맞추기 게임******");
 				System.out.println("기대하는 값 홀 또는 짝 을 입력해 주세요.");
@@ -88,11 +89,11 @@ public class Engine2 {
 				String expect = scanner.next();
 				System.out.println(String.format("예상 입력값은 %s", expect));
 
-				dice2.readExpect(expect);
+				dice.readExpect(expect);
 				int diceNumber = random.nextInt(6) + 1;
 				System.out.println(String.format("컴퓨터가 생성한 값 : %d", diceNumber));
-				dice2.setDice(diceNumber);
-				String result = dice2.swichDice();
+				dice.setDice(diceNumber);
+				String result = dice.swichDice();
 				;
 				break;
 			case 1:
@@ -100,7 +101,7 @@ public class Engine2 {
 				System.out.println("회원가입");
 				System.out.println("아이디 입력");
 				String userid = scanner.next();
-				member.setId(userid);
+				member.setUserid(userid);
 
 				break;
 			case 2:
@@ -109,7 +110,7 @@ public class Engine2 {
 				System.out.println("아이디 입력");
 				String id2 = scanner.next();
 
-				String returnId = member.getId();
+				String returnId = member.getUserid();
 				System.out.println("로그인 된 아이디" + returnId);
 				if (id2.equals(returnId)) {
 					System.out.println("로그인 성공");

@@ -1,4 +1,6 @@
-package com.jse.swing;
+package com.jse.member;
+
+import com.jse.grade.Grade;
 
 public class GradeService {
 	private Grade[] grades;

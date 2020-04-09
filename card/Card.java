@@ -1,10 +1,10 @@
-package com.jse.arr;
+package com.jse.card;
 //import java.util.Scanner;
-public class CardBean {
+public class Card {
 	private String kind;
 	private int number;
 	
-	public CardBean(String kind,int number) {
+	public Card(String kind,int number) {
 		this.kind=kind;
 		this.number=number;    
 	}

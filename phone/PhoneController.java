@@ -1,4 +1,4 @@
-package com.jse.inheritance;
+package com.jse.phone;
 
 import java.awt.Component;
 

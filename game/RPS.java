@@ -1,4 +1,4 @@
-package com.jse.app;
+package com.jse.game;
 
 import java.util.Random;
 public class RPS {

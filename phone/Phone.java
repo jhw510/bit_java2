@@ -1,4 +1,4 @@
-package com.jse.inheritance;
+package com.jse.phone;
 
 public class Phone {
 	private String phoneNumber,name,company;

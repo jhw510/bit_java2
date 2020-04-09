@@ -1,4 +1,4 @@
-package com.jse.swing;
+package com.jse.grade;
 
 //import java.util.Scanner;
 

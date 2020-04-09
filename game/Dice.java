@@ -1,7 +1,7 @@
-package com.jse.app;
+package com.jse.game;
 import java.util.Random;
 import java.util.Scanner;
-public class Dice2 {
+public class Dice {
 	private int diceNumber; 
 	private String expect;
 	

@@ -1,4 +1,7 @@
-package com.jse.swing;
+package com.jse.grade;
+import com.jse.member.GradeService;
+import com.jse.member.Member;
+import com.jse.member.MemberService;
 import com.jse.util.Constants2;
 import java.util.Scanner;
 

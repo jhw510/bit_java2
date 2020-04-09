@@ -1,4 +1,4 @@
-package com.jse.swing;
+package com.jse.member;
 
 import java.util.Scanner;
 
@@ -7,7 +7,9 @@ public class Member {
 	private String passwd;
 	private String name;
 	private int age;
-
+public Member() {
+	// TODO Auto-generated constructor stub
+}
 	public Member(String userid, String passwd, String name, int age) {
 		this.userid = userid;
 		this.passwd = passwd;
