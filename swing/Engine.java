@@ -1,5 +1,5 @@
 package com.jse.swing;
-
+import com.jse.util.Constants2;
 import java.util.Scanner;
 
 public class Engine {
@@ -8,18 +8,19 @@ public class Engine {
 		Scanner scanner = new Scanner(System.in);
 		GradeService gradeService = new GradeService();
 		MemberService memberService = new MemberService();
-
+		Constants2 MENU = new Constants2();
+		String message="";
 		while (true) {
-			System.out.println("0. 종료 1.성적표입력 2. 성적표출력 " + "3.총점별로 123등 나열하기   4 .회원가입 " + " 5. 회원들 나이순 정렬");
+			System.out.println(Constants2.MENU);
 			switch (scanner.nextInt()) {
 			case 0:
-				System.out.println("종료");
+				
 				return;
 
 			case 1:
-				System.out.println("성적표입력");
+				
 				for (int i = 0; i < 3; i++) {
-					System.out.println("국어,영어,수학  이름을  입력");
+					System.out.println(Constants2.GRADE_MEMU);
 					gradeService.add
 							(new GradeBean(scanner.nextInt(),
 									scanner.nextInt(), scanner.nextInt(),
@@ -32,11 +33,10 @@ public class Engine {
 			case 2:
 
 				GradeBean[] grades = gradeService.getGrades();
+				message ="";
 				for (int i = 0; i < 3; i++) {
-					GradeBean grade = grades[i];
-					System.out.println(String.format("[%s : 총점 %d 점, 평균 %d 점,학점 : %s]", grades[i].getName(),
-							grades[i].total(), grades[i].average(), grades[i].grade()));
-
+					message+=grades[i].toString();
+					
 				}
 				break;
 
@@ -75,9 +75,9 @@ public class Engine {
 				break;
 
 			case 4:
-				System.out.println("회원가입을 위한 정보를 입력해주세요");
+				System.out.println(Constants2.MEMBER_MEMU);
 				for (int i = 0; i < 3; i++) {
-					System.out.println("id, 비밀번호 , 이름 , 나이를  입력");
+					System.out.println(Constants2.MEMBER2_MEMU);
 					memberService.add
 					(new MemberBean(scanner.next(), 
 				scanner.next(), scanner.next(), scanner.nextInt()));
@@ -93,13 +93,13 @@ public class Engine {
 	}
 
 	public static GradeBean input(Scanner scanner) {
-		System.out.println("국어,영어,수학  이름을  입력");
+		System.out.println(Constants2.GRADE_MEMU);
 		return new GradeBean(scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.next());
 
 	}
 
 	public static MemberBean join(Scanner scanner) {
-		System.out.println("id ,비밀번호 , 이름,나이를  입력");
+		System.out.println(Constants2.MEMBER2_MEMU);
 		return new MemberBean(scanner.next(), scanner.next(), scanner.next(), scanner.nextInt());
 
 	}

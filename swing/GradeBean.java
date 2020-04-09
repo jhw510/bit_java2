@@ -85,4 +85,9 @@ public class GradeBean {
 		return grade;
 	}
 
+	@Override
+	public String toString() {
+		return "GradeBean :korea=" + korea + ", english=" + english + ", math=" + math + ", name=" + name ;
+	}
+
 }

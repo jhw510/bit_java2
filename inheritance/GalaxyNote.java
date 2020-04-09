@@ -1,19 +1,22 @@
 package com.jse.inheritance;
 
 public class GalaxyNote extends Iphone {
-	private String bigsize;
+	private String bigSize;
 
 	public GalaxyNote(String phoneNumber, String name, String company, boolean portable, String search, String bigsize) {
 		super(phoneNumber, name, company, portable,search);
-
+		this.bigSize=bigsize;
 	}
 
-	public String getBigsize() {
-		return bigsize;
+	public String getBigSize() {
+		return bigSize;
 	}
 
-	public void setBigsize(String bigsize) {
-		this.bigsize = bigsize;
+	public void setBigSize(String bigSize) {
+		this.bigSize = bigSize;
 	}
-
+	@Override
+	public String toString() {
+		return super.toString() + ", bigSize = " + bigSize;
+	}
 }

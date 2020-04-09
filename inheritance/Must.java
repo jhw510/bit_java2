@@ -1,23 +1,20 @@
 package com.jse.inheritance;
 
-import java.util.Scanner;
+import java.awt.Component;
 
 import javax.swing.JOptionPane;
-
+import com.jse.util.Constants;
 public class Must {
+	
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+
 		PhoneService phoneService = new PhoneService();
 		String message = "";
+		Constants MENU = new Constants();
+	System.out.println(phoneService.toString());
 		while (true) {
 			System.out.println();
-			switch (JOptionPane.showInputDialog(
-					"0종료 \t 1.집전화 입력 \t " + "2.집전화 정보 출력" + "\t 3.휴대전화 입력 "
-							+ "\t 4.휴대전화출력 "
-							+ "\t 5. 아이폰으로 검색"
-							+"\t 6. 검색결과내용"
-							+"\t 7. 갤럭시 노트 사이즈입력"
-							+"\t 8.사이즈 확인")) {
+			switch (JOptionPane.showInputDialog(Constants.MENU)) {
 			case "0":
 				return;
 
@@ -25,7 +22,7 @@ public class Must {
 				for (int i = 0; i < 3; i++) {
 
 					String[] values = JOptionPane
-							.showInputDialog("전화번호 (예:032-0000-0000),이름 ," + "통신사를 입력하시오   ***,를 꼭 입력해주세요***")
+							.showInputDialog(Constants.PHONE_MENU)
 							.split(",");
 
 					phoneService.add(new Phone(values[0], values[1], values[2]));
@@ -34,12 +31,10 @@ public class Must {
 				break;
 			case "2":
 				Phone[] phones = phoneService.getPhones();
-
+				message = "";
 				for (int i = 0; i < 3; i++) {
-					Phone phone = phones[i];
-					message += String.format("출력 : %s, %s ,%s  \n", phones[i].getPhoneNumber(), phones[i].getName(),
-							phones[i].getCompany());
-					/*
+					
+					message += phones[i].toString()	;				/*
 					 * ( "번호: "+phones[i].getPhoneNumber()+" 이름: " + phones[i].getName() + " 통신사: "
 					 * +phones[i].getCompany());
 					 */
@@ -50,7 +45,7 @@ public class Must {
 				for (int i = 0; i < 3; i++) {
 
 					String[] values = JOptionPane
-							.showInputDialog("휴대전화번호 (예 :010-xxxx-xxxx) ," + "이름 ,통신사를 입력하시오 ***,를 꼭 입력해주세요***")
+							.showInputDialog(Constants.CELPHONE_MENU)
 							.split(",");
 
 					phoneService.add(new CelPhone(values[0], values[1], values[2], true));
@@ -63,9 +58,7 @@ public class Must {
 
 				for (int i = 0; i < 3; i++) {
 					CelPhone celPhone = celPhones[i];
-					message += String.format("출력 : %s, %s , %s, %s \n", celPhones[i].getPhoneNumber(),
-							celPhones[i].getName(), celPhones[i].getCompany(), celPhones[i].getMove());
-
+					message += celPhones[i].toString();
 				}
 				JOptionPane.showMessageDialog(null, message);
 
@@ -73,11 +66,19 @@ public class Must {
 
 			case "5":
 
-				String search = JOptionPane.showInputDialog("검색어를 입력하시오");
+				for(int i=0;i<3;i++) {
+					String[] values = JOptionPane.showInputDialog(Constants.IPHONE_MENU).split(",");
+					phoneService.add(new Iphone(values[0], values[1], values[2], true, values[4]));
+				}
 
 				break;
 			case "6":
-				
+				Iphone[] iPhones = phoneService.getIphones();
+				message = "";
+				for(int i=0; i< 3;i++) {
+					message += iPhones[i].toString();
+				}
+				JOptionPane.showMessageDialog(null, message);
 			
 
 			
@@ -85,9 +86,20 @@ public class Must {
 				break;
 			
 			case "7" :
-				String bigsize = JOptionPane.showInputDialog("갤럭시 노트 사이즈 입력 ");
+				for(int i=0;i<3;i++) {
+					String[] values = JOptionPane.showInputDialog(Constants.GALAXYNOTE_MENU).split(",");
+					phoneService.add(new GalaxyNote(values[0], values[1], values[2], 
+															true, values[3], values[4]));
+				}
 				break;
-				
+			case "8": 
+				GalaxyNote[] galaxyNotes = phoneService.getGalaxyNote(); 
+				message = "";
+				for(int i=0; i< 3;i++) {
+					message += galaxyNotes[i].toString();
+				}
+				JOptionPane.showMessageDialog(null, message);
+				break;
 				
 			}
 		}
