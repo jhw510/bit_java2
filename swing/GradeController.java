@@ -2,7 +2,7 @@ package com.jse.swing;
 import com.jse.util.Constants2;
 import java.util.Scanner;
 
-public class Engine {
+public class GradeController {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class Engine {
 				for (int i = 0; i < 3; i++) {
 					System.out.println(Constants2.GRADE_MEMU);
 					gradeService.add
-							(new GradeBean(scanner.nextInt(),
+							(new Grade(scanner.nextInt(),
 									scanner.nextInt(), scanner.nextInt(),
 									scanner.next()));
 
@@ -32,7 +32,7 @@ public class Engine {
 
 			case 2:
 
-				GradeBean[] grades = gradeService.getGrades();
+				Grade[] grades = gradeService.getGrades();
 				message ="";
 				for (int i = 0; i < 3; i++) {
 					message+=grades[i].toString();
@@ -79,7 +79,7 @@ public class Engine {
 				for (int i = 0; i < 3; i++) {
 					System.out.println(Constants2.MEMBER2_MEMU);
 					memberService.add
-					(new MemberBean(scanner.next(), 
+					(new Member(scanner.next(), 
 				scanner.next(), scanner.next(), scanner.nextInt()));
 
 				}
@@ -92,15 +92,15 @@ public class Engine {
 		}
 	}
 
-	public static GradeBean input(Scanner scanner) {
+	public static Grade input(Scanner scanner) {
 		System.out.println(Constants2.GRADE_MEMU);
-		return new GradeBean(scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.next());
+		return new Grade(scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.next());
 
 	}
 
-	public static MemberBean join(Scanner scanner) {
+	public static Member join(Scanner scanner) {
 		System.out.println(Constants2.MEMBER2_MEMU);
-		return new MemberBean(scanner.next(), scanner.next(), scanner.next(), scanner.nextInt());
+		return new Member(scanner.next(), scanner.next(), scanner.next(), scanner.nextInt());
 
 	}
 }

@@ -1,7 +1,6 @@
 package com.jse.swing;
 
-public class ItemBean {
-
+public class Product {
 	private String name;
 
 	public void setName(String name) {

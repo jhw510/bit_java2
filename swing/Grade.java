@@ -11,13 +11,13 @@ package com.jse.swing;
  *   * 80점 이상이면 B 70점 이상이면 C 60점 이상이면 
  *   D 50점 이상이면 E 50점 미만이면 F 학점입니다라고 출력되게 해주세요 
  */
-public class GradeBean {
+public class Grade {
 	private int korea;
 	private int english;
 	private int math;
 	private String name;
 
-	public GradeBean(int korea, int english, int math, String name) {
+	public Grade(int korea, int english, int math, String name) {
 		this.korea = korea;
 		this.english = english;
 		this.math = math;

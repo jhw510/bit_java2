@@ -1,24 +1,24 @@
 package com.jse.swing;
 
 public class GradeService {
-	private GradeBean[] grades;
+	private Grade[] grades;
 	private int count;
 
 	public GradeService() {
-		grades = new GradeBean[3];
+		grades = new Grade[3];
 		count = 0;
 
 	}
 
-	public void setGrades(GradeBean[] Grades) {
+	public void setGrades(Grade[] Grades) {
 		this.grades = Grades;
 	}
 
-	public GradeBean[] getGrades() {
+	public Grade[] getGrades() {
 		return grades;
 	}
 
-	public void add(GradeBean grade) {
+	public void add(Grade grade) {
 		grades[count] = grade;
 	count++;
 	}

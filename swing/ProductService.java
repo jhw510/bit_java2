@@ -2,15 +2,15 @@ package com.jse.swing;
 
 public class ProductService {
 
-	private ProductBean[] products;
+	private Product[] products;
 
 	public ProductService() {
-		products = new ProductBean[10];
+		products = new Product[10];
 	}
-	public  void setProducts(ProductBean[] products) {
+	public  void setProducts(Product[] products) {
 		this.products = products;
 	}
-	public  ProductBean[] getProducts() {
+	public  Product[] getProducts() {
 		return products;
 	}
 }

@@ -2,15 +2,15 @@ package com.jse.swing;
 
 public class ItemService {
 
-	private ItemBean[] items;
+	private Item[] items;
 
 	public ItemService() {
-		items = new ItemBean[10];
+		items = new Item[10];
 	}
-	public  void setItems(ItemBean[] Items) {
+	public  void setItems(Item[] Items) {
 		this.items = items;
 	}
-	public  ItemBean[] getItems() {
+	public  Item[] getItems() {
 		return items;
 }
 }

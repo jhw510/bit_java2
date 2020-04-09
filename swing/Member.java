@@ -2,13 +2,13 @@ package com.jse.swing;
 
 import java.util.Scanner;
 
-public class MemberBean {
+public class Member {
 	private String userid;
 	private String passwd;
 	private String name;
 	private int age;
 
-	public MemberBean(String userid, String passwd, String name, int age) {
+	public Member(String userid, String passwd, String name, int age) {
 		this.userid = userid;
 		this.passwd = passwd;
 		this.name = name;

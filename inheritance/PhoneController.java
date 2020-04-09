@@ -4,7 +4,7 @@ import java.awt.Component;
 
 import javax.swing.JOptionPane;
 import com.jse.util.Constants;
-public class Must {
+public class PhoneController {
 	
 	public static void main(String[] args) {
 
