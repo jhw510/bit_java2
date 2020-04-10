@@ -18,7 +18,7 @@ public class CardController {
 			for(int i=0;i<3;i++) {
 			String[]valuse=JOptionPane.showInputDialog("카드 3장 받아요 모양,숫자").split(","); 
 			card = new Card();
-			card.setKind(Integer.parseInt(valuse[1]));
+			card.setKind(valuse[i]);
 			card.getNumber();
 			cardService.add(card);
 			
