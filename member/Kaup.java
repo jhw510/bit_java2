@@ -1,5 +1,5 @@
 package com.jse.member;
-
+import lombok.Data;
 import java.util.Scanner;
 
 /*
@@ -8,8 +8,16 @@ import java.util.Scanner;
  * 그 결과 정상 저체중 비만등으로 몸의 상태만
  * 알려주는 프로그램을 만들어주세요
  */
+
+@Data
 public class Kaup {
 
+
+
+
+	
+	
+	
 	private String kaupResult;
 	private double kaupCal;
 	private double kaupHeight;
@@ -47,6 +55,7 @@ public class Kaup {
 		return kaupResult;
 	}
 
+	
 	public String kaupResult() {
 
 		double kaupCal = kaupWeight / (kaupHeight * kaupHeight) * 10000;

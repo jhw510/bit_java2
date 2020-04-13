@@ -4,12 +4,13 @@ package com.jse.member;
 public class MemberServiceImpl implements MemberService{
 	private Member[] members;
 	private int count;
+	private String list;
 	
 	
 	
 	
 	public MemberServiceImpl() {
-		members = new Member[5];
+		members = new Member[6];
 	}
 	@Override
 	public void setMembers(Member[] members) {
@@ -26,8 +27,19 @@ public class MemberServiceImpl implements MemberService{
 	public void add(Member member) {
 		members[count] = member;
 		count++;
+		System.out.println("서비스로 들어온 멤버");
+		System.out.println(member);
+	}
+	@Override
+	public void setList(String list) {
+		this.list = list;
+
 	}
 
+	@Override
+	public String getList() {
+		return list;
+	}
 
 
 
@@ -59,5 +71,5 @@ public class MemberServiceImpl implements MemberService{
 		}
 		return result;
 	}
-
+	
 }

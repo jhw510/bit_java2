@@ -40,14 +40,14 @@ public class MemberController {
 					String input = JOptionPane.showInputDialog("주민등록번호를 입력하세요");
 					ssn.setSsn(input);
 					genderCheckerService.add(ssn);}
-				JOptionPane.showMessageDialog(null,genderCheckerService.printSSN());
+				JOptionPane.showMessageDialog(null,genderCheckerService.printSsn());
 				break;
 			case "4":
 				for(int i = 0; i <3; i++) {
 					kaup = new Kaup();
 					String[] values = JOptionPane.showInputDialog("몸무게, 키").split(",");
-					kaup.setWeight(Double.parseDouble(values[0]));
-					kaup.setHeight(Double.parseDouble(values[1]));
+					kaup.setKaupWeight(Double.parseDouble(values[0]));
+					kaup.setKaupHeight(Double.parseDouble(values[1]));
 					kaupService.add(kaup);
 				}
 				JOptionPane.showMessageDialog(null, kaupService.printKaup());

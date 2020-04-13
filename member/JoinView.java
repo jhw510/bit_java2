@@ -84,17 +84,28 @@ public class JoinView extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == saveButton) {
 			if (index < 5) {
-				textFields[0].setText(member[index].getName());
-				textFields[1].setText(member[index].getUserid());
-				textFields[2].setText(member[index].getPasswd());
-				textFields[3].setText(member[index].getSsn());
-				index++;
+			textFields[0].setText(member[index].getName());
+			textFields[1].setText(member[index].getUserid());
+			textFields[2].setText(member[index].getPasswd());
+			textFields[3].setText(member[index].getSsn());
+			index++;
 			}
+			
+			
+			String data = String.format("%s / %s / %s / %s",
+					textFields[0].getText(),
+					textFields[1].getText(),
+					textFields[2].getText(), 
+					textFields[3].getText());
+			
+			String[] arr  = data.split("/");
+			for(int i=0;i<arr.length;i++) {
+				System.out.println(arr[i]);
+			}
+		//	String[] names = arr[0].split(",");
 			JOptionPane.showMessageDialog(this, String.format("%s / %s / %s / %s", textFields[0].getText(),
 					textFields[1].getText(), textFields[2].getText(), textFields[3].getText()));
-			String[] data = String.format("%s / %s / %s / %s", textFields[0].getText(), textFields[1].getText(),
-					textFields[2].getText(), textFields[3].getText()).split("/");
-			Member[] members = memberService.getMembers();
+		//	Member[] members = memberService.getMembers();
 		} else if (e.getSource() == cancelButton) {
 
 		}
