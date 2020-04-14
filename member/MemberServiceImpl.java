@@ -1,16 +1,12 @@
-  
 package com.jse.member;
-
 public class MemberServiceImpl implements MemberService{
 	private Member[] members;
 	private int count;
 	private String list;
 	
 	
-	
-	
 	public MemberServiceImpl() {
-		members = new Member[6];
+		members = new Member[5];
 	}
 	@Override
 	public void setMembers(Member[] members) {
@@ -20,9 +16,6 @@ public class MemberServiceImpl implements MemberService{
 	public Member[] getMembers() {
 		return members;
 	}
-	
-
-	
 	@Override
 	public void add(Member member) {
 		members[count] = member;
@@ -40,36 +33,32 @@ public class MemberServiceImpl implements MemberService{
 	public String getList() {
 		return list;
 	}
-
-
-
-
-
 	@Override
 	public void setCount(int count) {
 		this.count = count;
-
 	}
-
 	@Override
 	public int getCount() {
 		return count;
 	}
-
-	
 	@Override
-	public String login(String userid, String passwd) {
-		getMembers();
-		String result = "로그인 실패";
-		for (int i = 0; i < members.length; i++) {
-			if (userid.equals(members[i].getUserid())) {
-				if (passwd.equals(members[i].getPasswd())) {
-					result = "로그인 성공";
-				}
-			} else
-				continue;
+	public Member login(Member member) {
+		Member ok = null;
+		for(int i=0;i<members.length;i++) {
+			if (member.getUserid()
+					.equals(members[i]
+							.getUserid())
+					&& member.getPasswd().equals(members[i].getPasswd())) {		
+				ok = new Member();
+		ok=members[i];
+		break;
+			}
 		}
-		return result;
+		System.out.println("결과" + ok);
+		return  ok;
 	}
 	
+	
 }
+	
+

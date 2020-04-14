@@ -6,10 +6,11 @@ public interface MemberService {
 	public void setCount(int count);
 	public int getCount();
 	public void add(Member member);
-	public String login(String userid, String passwd);
 	public void setList(String list);
 	public String getList();
+	public Member login(Member member);
 	
+
 	
 	
 }
