@@ -160,7 +160,9 @@ public class MemberView extends JFrame implements ActionListener {
 			Member[] members = memberService.getMembers();
 			String result = "";
 			for (int i = 0; i < members.length; i++) {
-				result += (members[i] + "\n");
+				result += (members[i].getName() + "/" + members[i].getUserid() + "/" +
+			members[i].getPasswd() + "/"
+			+ members[i].getSsn() + "/" + members[i].getAddr() + "\n");
 			}
 			nameText.setText("");
 			useridText.setText("");
@@ -175,11 +177,11 @@ public class MemberView extends JFrame implements ActionListener {
 			member.setUserid(useridText.getText());
 			member.setPasswd(passwdText.getText());
 			Member ok = memberService.login(member);
-			if(ok != null) {
-				//resultText.setText(ok.toString());
+			if (ok != null) {
+				// resultText.setText(ok.toString());
 				System.out.println("성공");
-		
-			}else {
+
+			} else {
 				System.out.println("실패");
 			}
 		}

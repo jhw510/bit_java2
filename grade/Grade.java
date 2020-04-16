@@ -1,5 +1,5 @@
 package com.jse.grade;
-import lombok.Data;
+
 //import java.util.Scanner;
 
 /*
@@ -12,8 +12,48 @@ import lombok.Data;
  *   D 50점 이상이면 E 50점 미만이면 F 학점입니다라고 출력되게 해주세요 
  */
 
-@Data
+
 public class Grade {
+	public int getKorean() {
+		return korean;
+	}
+
+	public void setKorean(int korean) {
+		this.korean = korean;
+	}
+
+	public int getMath() {
+		return math;
+	}
+
+	public void setMath(int math) {
+		this.math = math;
+	}
+
+	public int getEnglish() {
+		return english;
+	}
+
+	public void setEnglish(int english) {
+		this.english = english;
+	}
+
+	public int getJava() {
+		return java;
+	}
+
+	public void setJava(int java) {
+		this.java = java;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	private int korean,math,english,java;
 
 	private String name;
