@@ -9,26 +9,38 @@ public class CardServiceImpl implements CardService {
 	cards = new Card[3];
 	count=0;
 	}
+	
 	@Override
-	public void setCards(Card[] cards) {
-		this.cards=cards;
-		}
-	@Override
-	public Card[] getCards() {
+	public Card[] list() {
 		return cards;
 	}
+	
 	@Override
-	public void setCount(int count) {
-		this.count = count;
-	}
-	@Override
-	public int getCount() {
+	public int count() {
 		return count;
 	}
 	@Override
 	public void add(Card card) {
 		cards[count] = card;
 		count++;
+	}
+
+	@Override
+	public Card detail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Card card) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Card card) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 

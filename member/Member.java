@@ -51,6 +51,11 @@ public class Member {
 	public void setList(String list) {
 		this.list = list;
 	}
+	@Override
+	public String toString() {
+	
+		return String.format(name +"/"+ userid+"/" + passwd+"/" + ssn+"/"+addr, null) ;
+	}
 	
 
 }

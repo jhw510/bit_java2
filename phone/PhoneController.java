@@ -8,7 +8,7 @@ public class PhoneController {
 	
 	public static void main(String[] args) {
 
-		PhoneService phoneService = new PhoneService();
+		PhoneOldService phoneService = new PhoneOldService();
 		String message = "";
 		Constants MENU = new Constants();
 	System.out.println(phoneService.toString());
@@ -54,11 +54,11 @@ public class PhoneController {
 				break;
 
 			case "4":
-				CelPhone[] celPhones = phoneService.getCelPhones();
+				CellPhone[] cellPhones = phoneService.getCellPhones();
 
 				for (int i = 0; i < 3; i++) {
-					CelPhone celPhone = celPhones[i];
-					message += celPhones[i].toString();
+					CelPhone celPhone = cellPhones[i];
+					message += cellPhones[i].toString();
 				}
 				JOptionPane.showMessageDialog(null, message);
 

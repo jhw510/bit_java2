@@ -42,7 +42,7 @@ public class GradeOldController {
 				break;
 
 			case "2":
-				JOptionPane.showMessageDialog(null, gradeService.getGrades());
+				JOptionPane.showMessageDialog(null, gradeService.list());
 			
 				
 				break;

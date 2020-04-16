@@ -11,12 +11,9 @@ public class GradeServiceImpl implements GradeService{
 		count = 0;
 
 	}
+	
 	@Override
-	public void setGrades(Grade[] grades) {
-		this.grades = grades;
-	}
-	@Override
-	public Grade[] getGrades() {
+	public Grade[] list() {
 		return grades;
 	}
 	@Override
@@ -25,13 +22,9 @@ public class GradeServiceImpl implements GradeService{
 		count++;
 		
 	}
+	
 	@Override
-	public void setCount(int count) {
-		this.count = count;
-		
-	}
-	@Override
-	public int getCount() {
+	public int count() {
 		return count;
 	}
 	@Override
@@ -62,7 +55,7 @@ public class GradeServiceImpl implements GradeService{
 		}
 		return resule;
 	}
-	@Override
+/*	@Override
 	public String printGrades() {
 		String result = "";
 		Grade[] grades = getGrades();
@@ -73,16 +66,16 @@ public class GradeServiceImpl implements GradeService{
 					average(grades[i]),
 					record(grades[i]));
 		}
-		return result;
+		return result;*
 	
 	
 	
 	
 	
-	}
+	}*/
 	@Override
 	public String ranking() {
-		grades = getGrades();
+		grades = list();
 		int a = total(grades[0]);
 		int y = total(grades[1]);
 		int z = total(grades[2]);
@@ -114,6 +107,24 @@ public class GradeServiceImpl implements GradeService{
 		}
 
 		return null;
+	}
+
+	@Override
+	public Grade detail(Grade grade) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Grade grade) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Grade grade) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

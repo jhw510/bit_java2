@@ -1,6 +1,6 @@
 package com.jse.game;
 import javax.swing.*;
-public class GameSwing {
+public class GameView {
 public static void main(String[] args) {
 	JFrame frame = new JFrame ("가위바위보");
 	frame.setSize(800,600);
