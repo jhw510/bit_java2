@@ -22,7 +22,7 @@ public class MemberView extends JFrame implements ActionListener {
 	private JButton submitButton, listButton, loginButton, detailButton, nameButton, genderButton, countButton,
 			updateButton, deleteButton;
 	public MemberService memberService;
-
+    public int count;
 	public void open() {
 		memberService = new MemberServiceImpl();
 		setTitle("Swing Form");
@@ -194,7 +194,7 @@ public class MemberView extends JFrame implements ActionListener {
 			String[] ssns = arr[3].split(",");
 			String[] addrs = arr[4].split(",");
 			Member result;
-			for(int i=0;i<names.length; i++) {
+			for(int i=0;i<count; i++) {
 				result = new Member(); 
 				result.setName(names[i]);
 				result.setUserid(userids[i]);
@@ -206,7 +206,8 @@ public class MemberView extends JFrame implements ActionListener {
 		} else if (e.getSource() == listButton) {
 			Member[] members = memberService.list();
 			String result = "";
-			for (int i = 0; i < members.length; i++) {
+			
+			for (int i = 0; i < count; i++) {
 				result += (members[i].getName() + "/" + members[i].getUserid() + "/" +
 			members[i].getPasswd() + "/"
 			+ members[i].getSsn() + "/" + members[i].getAddr() + "\n");
@@ -266,7 +267,7 @@ public class MemberView extends JFrame implements ActionListener {
 			Member[] returnMembers = memberService.searchByName(nameText.getText());
 			if(returnMembers != null) {
 				String result = "";
-				for(int i=0; i< returnMembers.length; i++) {
+				for(int i=0; i< count; i++) {
 					result += returnMembers[i].toString()+"\n";
 				}
 				resultText.setText(result);
