@@ -1,10 +1,13 @@
 package com.jse.member;
 
+import lombok.Data;
 
+@Data
 public class Member {
-	private String userid,passwd,name,ssn, addr,list;
+	private String userid,passwd,name,ssn, addr;
+}
 
-	public String getUserid() {
+	/*public String getUserid() {
 		return userid;
 	}
 
@@ -58,4 +61,4 @@ public class Member {
 	}
 	
 
-}
+}*/
